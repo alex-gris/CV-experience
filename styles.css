@@ -1,0 +1,249 @@
+body {
+    background-color: #f1f1f1;
+    /*цвет заднего фона*/
+    color: #0f141e;
+    /*цвет шрифта*/
+
+    font-size: 16px;
+    /*размер шрифта*/
+
+    font-weight: normal;
+    /*жирность шрифта, normal (100-500)*/
+
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; - СЕМЕЙСТВО СТИЛЕЙ*/
+
+    font-family: 'Roboto', sans-serif;
+    /*Шрифт скачен с сайта roboto font: CSS rules to specify families (400)*/
+
+    /* font: normal 16px 'Roboto', sans-serif; 
+    В данной записи мы объединяем 3 предыдущих правила */
+}
+
+/* Для того, чтобы обратиться к строго определенному классу, для начала создаем селектор внутри html документа class="" 
+или id, если это уникальный элемент (ставим # перед значением id в CSS)
+В данном случае мы должны присвоить CSS стиль опредленному изображению. 
+Для того, чтобы CSS понял, что мы обращемся к class, ставим перед ним точку */
+
+a {
+    color: black;
+    text-decoration: none;
+    /* текст ссылок без подчеркивания */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* при наведении на текст ссылки, она подчеркивается */
+}
+
+a:active {
+    color: blue;
+    /* подсвечивает синим тектс ссылки при нажатии */
+}
+
+a:visited {
+    color: grey;
+    /* окрашивает ссылку, которую уже посещали в серый */
+}
+
+.avatar {
+    width: 250px;
+    border-radius: 28px;
+    /* скругление углов изображения */
+
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+    /* 1. 4px - отступ по оси X */
+    /* 2. 4px - отступ по оси Y */
+    /* 3. 14px - значение blur (размытие тени) */
+    /* 4. rgba(0, 0, 0, 0.25 - цвет тени)  */
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.info-text {
+    margin-left: 40px;
+}
+
+.info-text h4 {
+    margin-bottom: 10px;
+}
+
+/* Обращаемся к классу созданному внутри div, p означает, что мы присваиваем CSS стили ко всем элементам */
+.info p {
+    color: grey;
+
+    margin: 0;
+    /* значение размеров отступа */
+
+    font-style: italic;
+    /* стиль текста (наклонный) */
+
+    /* text-decoration: underline; */
+    /* стиль текста нижнее подчеркивание */
+
+    /* letter-spacing: 1px; */
+    /* расстояние между буквами в px */
+
+    /* word-spacing: 5px; */
+    /* расстояние между словами в px */
+}
+
+/* BOX MODEL */
+.container {
+    max-width: 750px;
+    /* максимальное расположение html документа на экране */
+
+    margin: auto;
+    /* центрует расположение контента внутри контейнера */
+    padding-top: 30px;
+}
+
+/* .social {
+    background: rgb(169, 169, 169);
+    padding: 15px 40px; */
+/* элемент box model, задает отступ от края блока до контента: 15px - сверху и снизу, 40px - по бокам */
+
+/* border: 5px solid rgb(102, 101, 101); */
+/* следующий элемент box model, в котором описан отступ в px, сплошной тип границы solid и ее цвет */
+
+/* border-bottom-style: dotted; - нижняя граница пунктиром
+    border-top-width: 15px; - толщина верхней границы 15px
+    border-right-color: blue; - цвет правой границы голубой */
+
+/* margin: 5px; */
+/* внешняя граница box model */
+/* } */
+
+/* .box-model>div {
+ Знак означает, что только дочерние div будут применять эти стили 
+    float: left;
+    background: black;
+    height: 200px;
+    border: 4px solid red;
+    width: 25%;
+    box-sizing: border-box;
+}*/
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 0 20px;
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 10px;
+}
+
+/* li в данном классе означает, что мы применям цвет ко всем элементам */
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+/* отступ между ячейками td - 10px */
+
+.table td:nth-child(2),
+.table td:nth-child(3) {
+    color: #86868f;
+}
+
+/* псевдо-селектор nth-child() позволяет точечно стилизовать опредленный td */
+
+/* .table tr:nth-child(even) {
+    background: #ffe5e5;
+} 
+для каждой четной строки применяется определенный цвет заднего фона*/
+
+.link {
+    list-style: none;
+    padding: 0;
+}
+
+.contact h2 {
+    text-align: center;
+    /* центруем заголовок h2 */
+}
+
+.form-group label {
+    display: block;
+    /* Каждый из элементов label в классе form-group выстраивается в один уровень */
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    /* добавляет нижнюю границу */
+    color: #000;
+    padding: 15px 0 10px;
+    /* Отступы для input 15px - сверху, 0 - по бокам, 10px - снизу */
+    outline: none;
+    /* При наведении на input появляется черная рамка. Здесь мы обнуляем ее */
+    font-family: inherit;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row>.form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.row>.form-group :first-child {
+    margin-right: 20px;
+}
+
+.btn {
+    background: #111;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
